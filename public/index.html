@@ -13,10 +13,19 @@
 <p>AlloyProxy</p>
 <form class="url" method="POST" action="/proxy/session/">
     <input placeholder="https://www.google.com" name="url" id="iurl" type="text">
+<form class="url" method="POST" action="/proxy/session/" id="proxyform">
+    <input placeholder="Enter URL" name="url" id="iurl" type="text">
     <button type="submit" id="btn">Go!</button>
+    <input type="radio" id="self" onclick="selfserver();" checked class="clickable"><label for="self" class="clickable"> Self Server</label><br>
+    <input type="radio" id="server1" onclick="server1();" checked class="clickable"><label for="server1" class="clickable"> Server 1 (https://alloyproxy.miniurl.repl.co)</label><br>
+    <input type="radio" id="server2" onclick="server2();" checked class="clickable"><label for="server2" class="clickable"> Server 2 (https://titaniumnetwork.miniurl.repl.co)</label><br>
     <a href="https://github.com/titaniumnetwork-dev/alloyproxy">Fork on GitHub!</a>
 </form>
 </div>
 </div>
+<script>
+
+</script>
 </body>
+</html> 
 </html>
