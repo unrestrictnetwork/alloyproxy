@@ -7,12 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="__alloy_style.css" rel="stylesheet">
+    <style>
+        .clickable {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body >
 <div class="container">
-<p>AlloyProxy</p>
-<form class="url" method="POST" action="/proxy/session/">
-    <input placeholder="https://www.google.com" name="url" id="iurl" type="text">
+    <p>AlloyProxy</p>
 <form class="url" method="POST" action="/proxy/session/" id="proxyform">
     <input placeholder="Enter URL" name="url" id="iurl" type="text">
     <button type="submit" id="btn">Go!</button>
@@ -24,7 +27,15 @@
 </div>
 </div>
 <script>
-
+    function selfserver() {
+        document.getElementById('proxyform').setAttribute("action", "/proxy/session/");
+    }
+    function server1() {
+        document.getElementById('proxyform').setAttribute("action", "https://alloyproxy.miniurl.repl.co/proxy/session/");
+    }
+    function server2() {
+        document.getElementById('proxyform').setAttribute("action", "https://titaniumnetwork.miniurl.repl.co/createSession");
+    }
 </script>
 </body>
 </html> 
